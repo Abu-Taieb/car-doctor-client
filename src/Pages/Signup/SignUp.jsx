@@ -7,8 +7,27 @@ import { AuthContext } from "../../providers/AuthProvider";
 const SignUp = () => {
   const [error, setError] = useState("");
 
-  const { createUser } = useContext(AuthContext);
+  const { createUser, signUpGoogle } = useContext(AuthContext);
 
+    const handleSignUpGoogle = event => {
+        event.preventDefault();
+        console.log("google");
+    }
+
+    signUpGoogle()
+    .then(result => {
+        const googleUser = result.user;
+        console.log(googleUser);
+    })
+    .then(error => {
+        console.error(error);
+        console.log(error.message);
+    })
+
+
+
+
+//   Sign in with email & password 
   const handleSignUp = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -86,7 +105,7 @@ const SignUp = () => {
             <div className="">
               <p className="text-center font-semibold my-4">Or Sign Up With</p>
               <div className="flex gap-10 justify-center mb-5">
-                <button className="btn gap-2 btn-outline border-[#FF3811] hover:bg-[#FF3811] hover:border-[#FF3811]">
+                <button onClick={handleSignUpGoogle} className="btn gap-2 btn-outline border-[#FF3811] hover:bg-[#FF3811] hover:border-[#FF3811]">
                   Google <FaGoogle />
                 </button>
                 <button className="btn btn-outline border-[#FF3811] hover:bg-[#FF3811] hover:border-[#FF3811] gap-2">
@@ -94,7 +113,7 @@ const SignUp = () => {
                 </button>
               </div>
               <p className="text-center my-3">
-                Already have an Account{" "}
+                Already have an Account?{" "}
                 <Link to={"/login"} className="font-bold text-[#FF3811]">
                   Log in
                 </Link>
