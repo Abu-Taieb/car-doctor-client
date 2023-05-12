@@ -7,22 +7,25 @@ import { AuthContext } from "../../providers/AuthProvider";
 const SignUp = () => {
   const [error, setError] = useState("");
 
-  const { createUser, signUpGoogle } = useContext(AuthContext);
+  const { createUser } = useContext(AuthContext);
 
-    const handleSignUpGoogle = event => {
-        event.preventDefault();
-        console.log("google");
-    }
+  // const { signUpGoogle } = useContext(AuthContext);
 
-    signUpGoogle()
-    .then(result => {
-        const googleUser = result.user;
-        console.log(googleUser);
-    })
-    .then(error => {
-        console.error(error);
-        console.log(error.message);
-    })
+
+  //   const handleSignUpGoogle = event => {
+  //       event.preventDefault();
+  //       console.log("google");
+  //   }
+
+  //   signUpGoogle()
+  //   .then(result => {
+  //       const googleUser = result.user;
+  //       console.log(googleUser);
+  //   })
+  //   .then(error => {
+  //       console.error(error);
+  //       console.log(error.message);
+  //   })
 
 
 
@@ -105,7 +108,7 @@ const SignUp = () => {
             <div className="">
               <p className="text-center font-semibold my-4">Or Sign Up With</p>
               <div className="flex gap-10 justify-center mb-5">
-                <button onClick={handleSignUpGoogle} className="btn gap-2 btn-outline border-[#FF3811] hover:bg-[#FF3811] hover:border-[#FF3811]">
+                <button className="btn gap-2 btn-outline border-[#FF3811] hover:bg-[#FF3811] hover:border-[#FF3811]">
                   Google <FaGoogle />
                 </button>
                 <button className="btn btn-outline border-[#FF3811] hover:bg-[#FF3811] hover:border-[#FF3811] gap-2">
