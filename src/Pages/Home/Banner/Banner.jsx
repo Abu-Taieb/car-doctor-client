@@ -16,8 +16,8 @@ const Banner = () => {
             have suffered alteration in some form
           </p>
           <div className="flex gap-5">
-            <button className="btn btn-error ">Discover More</button>
-            <button className="btn btn-outline btn-active">
+            <button className="btn bg-[#FF3811] border-[#FF3811] hover:bg-[#fff] hover:border-[#fff] hover:text-[#FF3811]">Discover More</button>
+            <button className="btn bg-[#fff] text-[#FF3811] border-[#FFF] hover:border-[#FF3811] hover:bg-[#FF3811] hover:text-[#FFF] btn-active">
               Latest Project
             </button>
           </div>

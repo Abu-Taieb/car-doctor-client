@@ -13,7 +13,7 @@ const About = () => {
           />
         </div>
         <div className="lg:w-1/2 pr-12">
-          <h5 className="text-error font-bold">About Us</h5>
+          <h5 className="text-[#FF3811] font-bold">About Us</h5>
           <div className="">
             <h2 className="text-5xl font-bold py-5 mb-5">
               We are qualified & of experience in this field
@@ -29,7 +29,7 @@ const About = () => {
               humour, or randomised words which do not look even slightly
               believable.
             </p>
-            <button className="btn btn-error mt-10">Get More Info</button>
+            <button className="btn bg-[#FF3811] border-[#FF3811] hover:bg-[#FFF] hover:text-[#FF3811] hover:border-[#FF3811] mt-10">Get More Info</button>
           </div>
         </div>
       </div>

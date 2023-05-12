@@ -13,7 +13,7 @@ const Services = () => {
   return (
     <div className="my-10">
       <div className="text-center mb-10">
-        <h5 className="text-error font-bold">Service</h5>
+        <h5 className="text-[#FF3811] font-bold">Service</h5>
         <h2 className="text-5xl font-bold py-5">Our Service Area</h2>
         <p className="w-1/2 mx-auto">
           the majority have suffered alteration in some form, by injected

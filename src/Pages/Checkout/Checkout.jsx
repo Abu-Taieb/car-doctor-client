@@ -1,54 +1,91 @@
 import { useLoaderData } from "react-router-dom";
+import checkoutImg from "../../assets/images/checkout/checkout.png";
 
 const Checkout = () => {
   const service = useLoaderData();
   const { title, _id, price, description } = service;
 
   return (
-    <div className="hero min-h-screen bg-base-200">
-      <div className="hero-content flex-col lg:flex-row-reverse">
-        <div className="text-center lg:text-left">
-          <h1 className="text-5xl font-bold">Login now!</h1>
-          <p className="py-6">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
-          </p>
-        </div>
-        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-          <div className="card-body">
+    <>
+      <div className="">
+        <img src={checkoutImg} className="w-full rounded-xl" />
+      </div>
+      <div className="hero min-h-screen">
+        <form className="w-full shadow-2xl bg-base-200 p-10 rounded-xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
             <div className="form-control">
-              <label className="label">
-                <span className="label-text">Email</span>
-              </label>
               <input
                 type="text"
+                name="name"
+                placeholder="First Name"
+                className="input input-bordered"
+                required
+              />
+            </div>
+            <div className="form-control">
+              <input
+                type="text"
+                name="name"
+                placeholder="Last Name"
+                className="input input-bordered"
+                required
+              />
+            </div>
+            <div className="form-control">
+              <input
+                type="number"
+                name="phone"
+                placeholder="Phone"
+                className="input input-bordered"
+                required
+              />
+            </div>
+            <div className="form-control">
+              <input
+                type="email"
+                name="email"
                 placeholder="email"
                 className="input input-bordered"
+                required
+              />
+            </div>
+
+            <div className="form-control">
+              <input
+                type="text"
+                name="password"
+                placeholder="Password"
+                className="input input-bordered"
+                required
               />
             </div>
             <div className="form-control">
-              <label className="label">
-                <span className="label-text">Password</span>
-              </label>
               <input
                 type="text"
-                placeholder="password"
+                name="password"
+                placeholder="Confirm Password"
                 className="input input-bordered"
+                required
               />
-              <label className="label">
-                <a href="#" className="label-text-alt link link-hover">
-                  Forgot password?
-                </a>
-              </label>
-            </div>
-            <div className="form-control mt-6">
-              <button className="btn btn-primary">Login</button>
             </div>
           </div>
-        </div>
+          <div className="form-control mt-5 border rounded-xl">
+            <textarea
+              className="px-5 py-4 rounded-xl"
+              name="message"
+              placeholder="Your Message"
+              id=""
+              cols="30"
+              rows="5"
+              required
+            />
+          </div>
+          <div className="form-control mt-6">
+            <button className="btn bg-[#FF3811] border-[#FF3811]">Login</button>
+          </div>
+        </form>
       </div>
-    </div>
+    </>
   );
 };
 

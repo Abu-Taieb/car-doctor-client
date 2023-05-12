@@ -22,7 +22,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar h-24">
+    <div className="navbar h-24 mb-5">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -92,7 +92,7 @@ const Navbar = () => {
             />
           </svg>
         </button>
-        <button className="btn btn-outline btn-error">Appointment</button>
+        <button className="btn btn-outline border-[#FF3811] text-[#FF3811] hover:bg-[#FF3811] hover:border-[#FF3811]">Appointment</button>
       </div>
     </div>
   );

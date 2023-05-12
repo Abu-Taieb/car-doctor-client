@@ -97,7 +97,7 @@ const SignUp = () => {
                 />
               </div>
               <div className="form-control mt-6">
-                <p className="text-red-500 text-sm mb-2">{error}</p>
+                <p className="text-[#FF3811] text-sm mb-2">{error}</p>
                 <input
                   className="btn bg-[#FF3811] border-[#FF3811]"
                   type="submit"
