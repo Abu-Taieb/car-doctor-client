@@ -3,7 +3,8 @@ import checkoutImg from "../../assets/images/checkout/checkout.png";
 
 const Checkout = () => {
   const service = useLoaderData();
-  const { title, _id, price, description } = service;
+  const { title} = service;
+  console.log(title);
 
   return (
     <>
@@ -12,13 +13,14 @@ const Checkout = () => {
       </div>
       <div className="hero min-h-screen">
         <form className="w-full shadow-2xl bg-base-200 p-10 rounded-xl">
+        <h3 className="text-center pb-10 text-3xl font-semibold">Check Out: {title}</h3>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-            <div className="form-control">
+            <div className="form-control ">
               <input
                 type="text"
                 name="name"
                 placeholder="First Name"
-                className="input input-bordered"
+                className="input"
                 required
               />
             </div>
@@ -27,7 +29,7 @@ const Checkout = () => {
                 type="text"
                 name="name"
                 placeholder="Last Name"
-                className="input input-bordered"
+                className="input"
                 required
               />
             </div>
@@ -36,7 +38,7 @@ const Checkout = () => {
                 type="number"
                 name="phone"
                 placeholder="Phone"
-                className="input input-bordered"
+                className="input"
                 required
               />
             </div>
@@ -45,7 +47,7 @@ const Checkout = () => {
                 type="email"
                 name="email"
                 placeholder="email"
-                className="input input-bordered"
+                className="input"
                 required
               />
             </div>
@@ -55,7 +57,7 @@ const Checkout = () => {
                 type="text"
                 name="password"
                 placeholder="Password"
-                className="input input-bordered"
+                className="input"
                 required
               />
             </div>
@@ -64,12 +66,12 @@ const Checkout = () => {
                 type="text"
                 name="password"
                 placeholder="Confirm Password"
-                className="input input-bordered"
+                className="input"
                 required
               />
             </div>
           </div>
-          <div className="form-control mt-5 border rounded-xl">
+          <div className="form-control mt-5 rounded-xl">
             <textarea
               className="px-5 py-4 rounded-xl"
               name="message"
